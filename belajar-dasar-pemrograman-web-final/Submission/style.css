@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+*::selection {
+  color: #013595;
+  background: #91b5ff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 100px;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  background-color: #eef6fa;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  box-shadow: 0 4px 41px rgba(25, 14, 55, 0.14);
+  padding: 15px 10%;
+  transition: 0.2s;
+  margin-bottom: 20px;
+}
+
+#content {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+aside {
+  flex: 1;
+  padding: 20px;
+  margin: auto;
+}
+
+article {
+  padding: 10px;
+  background-color: #eef5f9;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #002B80;
+  text-align: center;
+}
+
+aside h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #002B80;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.navbar a {
+  font-size: 1rem;
+  padding: 11px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #002B80;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #abc4ff;
+}
+
+h1 {
+  margin: 10px;
+  text-align: left;
+  font-weight: 1000;
+  text-transform: uppercase;
+  color: #002B80;
+}
+
+p {
+  text-align: justify;
+  margin: 20px;
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  margin: auto;
+  height: 200px;
+  max-width: 1; 
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+/* Semua slide */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 56.25%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.prev, .next {
+  color: #002B80;
+  border: none;
+  font-size: 24px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes slideInAnimation {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}  
